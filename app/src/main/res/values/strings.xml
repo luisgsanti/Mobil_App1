@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppClass_1</string>
+    <string name="btn_labeltoast">TOAST</string>
+    <string name="btn_labelcount">COUNT</string>
+    <string name="toast_menssage">0</string>
+    <string name="menssage">Hola Mundo</string>
+
+</resources>
