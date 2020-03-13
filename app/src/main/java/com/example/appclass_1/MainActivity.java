@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             countTv.setText(savedInstanceState.getString("contador"));
             count = Integer.parseInt(savedInstanceState.getString("contador"));
         }
+        cambiarColor();
     }
 
     @Override
@@ -58,9 +59,7 @@ public class MainActivity extends AppCompatActivity {
         if (countTv != null)
             countTv.setText(Integer.toString(count));
 
-        if (count >=1){
-            cambiarColor();
-        }
+         cambiarColor();
     }
 
     public void aleatorynumber (View view){
@@ -70,29 +69,32 @@ public class MainActivity extends AppCompatActivity {
 
         count = random.nextInt(999);
 
-        if (count >=1){
-            cambiarColor();
-        }
+        cambiarColor();
 
         countTv.setText(Integer.toString(count));
     }
 
     public void cambiarColor(){
-        btnCount.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.holo_green_dark));
-        btnCount.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.white));
 
-        btnZero.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.holo_purple));
-        btnZero.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.white));
+        if (count >=1) {
+            btnCount.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.holo_green_dark));
+            btnCount.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.white));
+
+            btnZero.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.holo_purple));
+            btnZero.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.white));
+        }else{
+            btnZero.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.darker_gray));
+            btnZero.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.black));
+
+            btnCount.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.colorPrimary));
+            btnCount.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.black));
+        }
     }
 
     public void reset(View view){
         count = 0;
         countTv.setText(Integer.toString(0));
 
-        btnZero.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.darker_gray));
-        btnZero.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.black));
-
-        btnCount.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.colorPrimary));
-        btnCount.setTextColor(ContextCompat.getColor(getBaseContext(), android.R.color.black));
+        cambiarColor();
     }
 }

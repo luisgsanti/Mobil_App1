@@ -7,54 +7,72 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_Random2"
-        android:layout_width="339dp"
-        android:layout_height="64dp"
+        android:id="@+id/btn_Zero"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="281dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="#6A6C75"
+        android:onClick="reset"
+        android:text="ZERO"
+        android:textColor="#050000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_count"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_Random"
+        android:layout_width="127dp"
+        android:layout_height="53dp"
         android:background="@color/colorPrimary"
         android:onClick="aleatorynumber"
         android:text="Random"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintEnd_toStartOf="@+id/btn_toast"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_count"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
 
     <Button
         android:id="@+id/btn_toast"
-        android:layout_width="341dp"
-        android:layout_height="70dp"
+        android:layout_width="136dp"
+        android:layout_height="54dp"
         android:background="@color/colorPrimary"
         android:onClick="showToast"
         android:text="@string/btn_labeltoast"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintHorizontal_bias="0.928"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.168" />
 
     <Button
         android:id="@+id/btn_count"
-        android:layout_width="344dp"
-        android:layout_height="67dp"
+        android:layout_width="284dp"
+        android:layout_height="53dp"
         android:background="@color/colorPrimary"
         android:onClick="countApp"
         android:text="@string/btn_labelcount"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_toast"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.194" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/toast_menssage"

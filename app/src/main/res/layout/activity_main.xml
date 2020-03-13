@@ -38,18 +38,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="349dp"
-        android:layout_height="259dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/toast_menssage"
         android:textSize="160sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_count"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Random"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.55" />
 
     <Button
         android:id="@+id/btn_Random"
