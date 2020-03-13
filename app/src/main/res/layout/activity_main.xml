@@ -11,57 +11,75 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:onClick="showToast"
         android:text="@string/btn_labeltoast"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        android:onClick="showToast"
-        />
+        app:layout_constraintVertical_bias="0.032" />
 
     <Button
         android:id="@+id/btn_count"
         android:layout_width="149dp"
-        android:layout_height="61dp"
+        android:layout_height="48dp"
         android:background="@color/colorPrimary"
         android:onClick="countApp"
         android:text="@string/btn_labelcount"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.811" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="349dp"
+        android:layout_height="259dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/toast_menssage"
         android:textSize="160sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_count"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_toast" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Random"
+        app:layout_constraintVertical_bias="0.206" />
 
     <Button
         android:id="@+id/btn_Random"
-        android:layout_width="143dp"
-        android:layout_height="62dp"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
         android:background="@color/colorPrimary"
         android:onClick="aleatorynumber"
         android:text="Random"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_toast"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <Button
+        android:id="@+id/btn_Zero"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="138dp"
+        android:layout_height="47dp"
+        android:background="#6A6C75"
+        android:text="ZERO"
+        android:textColor="#050000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_count"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.904" />
+        app:layout_constraintVertical_bias="0.808"
+        android:onClick="reset"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
